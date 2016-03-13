@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+
+
+{% load staticfiles %}
+
+
+{% block title %}home_mk_auto{% endblock title %}
+
+
+{% block nav_brand_index %}active{% endblock %}
+
+
+{% block content %}
+
+<div class="background-img-head-content" data-type="background" data-speed="7">
+  <div class="background-color-head-content">
+    <div class="head-content">
+      <div class="container">
+        <h2 id="h2-head-content"><img src="{% static 'images/1_Primary_logo_on_transparent_225x75.png'%}" alt="..."></h2>          
+          <h6>autoservice</h6>            
+         <p class="p-head-content"><a class="btn-about_us" href="#" role="button">о компании</a></p>
+         <div class="pulse1"><p class="p-arrow-down"><i class="fa fa-arrow-circle-o-down fa-2x"></i></p></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="main-appointment">
+      <div class="container">
+           {% for onlines in online %}
+        <h1 class="h1-appointment-content">{{ onlines.name }}</h1>
+        <h2 class="h2">{{ onlines.title }}</i></h2>     
+          <p class="p-text">{{ onlines.description }}</p>
+{% endfor %}
+          <p class="p-appointment-content"><a class="btn-appointment" href="{% url 'appointment' %}" role="button"><i class="fa fa-pencil"></i> Начать запись</a></p>
+      </div>
+    </div>
+<div class="background-img-service-content" data-type="background" data-speed="7">
+  <div class="background-color-service-content">
+    <div class="service-content">
+      <div class="row">
+  {% for service in services %}
+        <div class="col-xs-6 col-md-3">
+          <a href="#" class="thumbnail">
+            <img class="service-img" src="{{ service.photo.url }}">
+          </a>
+        </div>
+{% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+<div class="background-img-social-content">
+    <div class="social-content">
+      <img src="{% static 'images/soc_block.png' %}">
+      <div class="social-item">
+        <ul class="facebook">
+          <a href="#"><i class="fa fa-facebook-official fa-4x"></i></a> 
+          <a href="#"><i class="fa fa-vk fa-4x"></i></a>
+        </ul>
+    </div>
+  </div>
+</div>
+   
+{% endblock content %}

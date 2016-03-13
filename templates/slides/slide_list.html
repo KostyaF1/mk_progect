@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+
+{% load staticfiles %}
+
+
+{% block title %}services_mk_auto{% endblock title %}
+
+
+{% block nav_brand_index %}active{% endblock %}
+
+
+{% block content %}
+
+{% for slide in object_list %}
+ 
+<img src="{{slide.photo.url}}">
+  
+{% endfor %}
+
+
+{% endblock content %}

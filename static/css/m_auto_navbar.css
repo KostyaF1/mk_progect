@@ -1,0 +1,197 @@
+.main-header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background: none;
+	z-index: 10000;
+	height: 180px;
+	overflow: hidden;
+	-webkit-transition: height 0.9s;
+	-moz-transition: height 0.9s;
+	transition: height 0.9s;
+}
+
+.main-header .cbp-af-inner {
+    border-radius: none;
+	width: 90%;
+	max-width: 69em;
+	margin: 0 auto;
+	padding: 0 0;
+}
+
+.main-header h4,
+.main-header .nav-main {
+	display: inline-block;
+	position: relative;
+}
+
+ /* We just have one-lined elements, so we'll center the elements with the line-height set to the height of the header */
+.main-header h4 {
+	line-height: 200px;
+}
+
+.main-header .nav-main a,
+.main-header .nav-main .feedback {
+	line-height: 280px;
+}
+
+.main-header h4 {
+    font-family: Mistral;
+	text-transform: uppercase;
+	color: #E7E7E7;
+	letter-spacing: 5px;
+	font-size: 3em;
+    font-weight: 100;
+	margin: 0;
+	float: left;
+}
+
+.main-header .nav-main {
+	float: right;
+}
+
+.main-header .nav-main a {
+	color: #E7E7E7;
+	font-weight: 600;
+	margin: 0 0 0 20px;
+	font-size: 1em;
+    padding: 4px;
+}
+
+.main-header .nav-main .feedback {
+    border: 1px solid #E7E7E7;
+	color: #E7E7E7;
+	font-weight: 600;
+	margin: 0 0 0 20px;
+	font-size: 1.em;
+    padding: 4px;
+}
+
+.main-header .nav-main a:hover,
+.main-header .nav-main .feedback:hover {
+	color: #3E4651;
+    background-color: #E7E7E7;
+    border-radius: none;
+    text-decoration: none;  
+}
+
+
+/* compressed */
+
+.main-header h4,
+.main-header .nav-main a,
+.main-header .nav-main .feedback {
+	-webkit-transition: all 0.9s;
+	-moz-transition: all 0.9s;
+	transition: all 0.9s;
+}
+
+.main-header.main-header-compressed {
+    background: #3E4651;
+	height: 80px;
+}
+
+.main-header.main-header-compressed h4 {
+	line-height: 80px;
+}
+
+.main-header.main-header-compressed .nav-main a {
+    border: none;
+	line-height: 100px;
+    color: #E7E7E7;
+}
+
+.main-header.main-header-compressed .nav-main .feedback {
+    border: 1px solid #E7E7E7;
+	line-height: 100px;
+    color: #E7E7E7;
+}
+
+.main-header.main-header-compressed .nav-main a:hover,
+.main-header.main-header-compressed .nav-main .feedback:hover {
+	color: #3E4651;
+    background-color: #E7E7E7;
+    border-radius: none;
+    text-decoration: none;  
+}
+
+.main-header.main-header-compressed h4 {
+    font-family: Mistral;
+	font-size: 2em;
+    color: rgba(18, 51, 84, 0.95);
+}
+
+/* Example Media Queries */
+@media screen and (max-width: 55em) {
+	
+	.main-header .cbp-af-inner {
+		width: 100%;
+	}
+
+	.main-header h4,
+	.main-header .nav-main{
+		display: block;
+		margin: 0 auto;
+		text-align: center;
+		float: none;
+	}
+
+	.main-header h4 {
+		line-height: 115px;
+	}
+
+    .main-header .nav-main a,
+    .main-header .nav-main .feedback {
+		line-height: 50px;
+	}
+
+	.main-header .nav-main a,
+    .main-header .nav-main .feedback {
+		margin: 0 5px;
+	}
+
+	.main-header.main-header-compressed h4 .main-logo{
+		line-height: 20px;
+	}
+  
+    .main-header.main-header-compressed .nav-main a,
+    .main-header.main-header-compressed .nav-main .feedback {
+		line-height: 45px;
+	}
+
+	.main-header.main-header-compressed h4 {
+		font-size: 1em;
+	}
+
+	.main-header.main-header-compressed .nav-main a,
+    .main-header.main-header-compressed .nav-main .feedback {
+		font-size: 1em;
+	}
+}
+
+@media screen and (max-width: 32.25em) {
+	.main-header .nav-main a,
+    .main-header .nav-main .feedback {
+		font-size: 1em;
+	}
+
+    .main-header .nav-main a,
+    .main-header .nav-main .feedback {
+		line-height: 25px;
+	}
+
+    .main-header .nav-main a,
+    .main-header .nav-main .feedback {
+		margin: 0 2px;
+	}
+}
+
+@media screen and (max-width: 24em) {
+	.main-header .nav-main a,
+	.main-header.main-header-compressed .nav-main a,
+    .main-header .nav-main .feedback,
+    .main-header.main-header-compressed .nav-main .feedback {
+		line-height: 1;
+	}
+}
